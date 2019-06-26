@@ -29,5 +29,5 @@ EMail: michael.bearly@gmail.com
 * Kubuntu 18.04
 * Linux Mint 19
 
-**TAny questions? Please contact me on :**
+**Any questions? Please contact me on :**
 * EMail - michael.bearly@gmail.com
