@@ -3,14 +3,40 @@
 # -------------------------[ micheal.bearly@gmail.com ]-------------------------
 # --------------------------------[ Thank you ]---------------------------------
 
-logo.image = Image("logo.png");
+# paint it black
 Window.SetBackgroundTopColor(0, 0, 0);
 Window.SetBackgroundBottomColor(0, 0, 0);
 
+# load the logo
+logo.image = Image("logo.png");
 logo.sprite = Sprite(logo.image);
-logo.sprite.SetX (Window.GetX() + Window.GetWidth()  / 2 - logo.image.GetWidth()  / 2);
-logo.sprite.SetY (Window.GetY() + Window.GetHeight() / 2 - logo.image.GetHeight() / 2);
-logo.sprite.SetOpacity (1);
+logo.opacity_angle = 0;
+
+# ---------------------------------- Refresh -----------------------------------
+
+fun refresh_callback ()
+{
+  # set logo position
+  logo.sprite.SetX (Window.GetX() + Window.GetWidth()  / 2 - logo.image.GetWidth()  / 2);
+  logo.sprite.SetY (Window.GetY() + Window.GetHeight() / 2 - logo.image.GetHeight() / 2);
+
+  # show pulse animation when system is not booting
+  if (Plymouth.GetMode () != "boot")
+    {
+      logo.opacity_angle += ((2 * 3.14) / 50) * 0.5;  # 0.5 HZ
+      min_opacity = 0.3;
+      opacity = (Math.Cos(logo.opacity_angle) + 1) / 2;
+      opacity *= 1 - min_opacity;
+      opacity += min_opacity;
+      logo.sprite.SetOpacity (opacity);
+    }
+  else
+    {
+      logo.sprite.SetOpacity (1);
+    }
+}
+
+Plymouth.SetRefreshFunction (refresh_callback);
 
 # ---------------------------------- Dialogue ----------------------------------
 
@@ -127,23 +153,6 @@ if (Plymouth.GetMode () == "boot")
 
   Plymouth.SetBootProgressFunction(progress_callback);
 }
-
-# ---------------------------------- Shutdown ----------------------------------
-
-fun shutdown_pulse_callback()
-{
-  if (Plymouth.GetMode () != "boot")
-    {
-      logo.opacity_angle += ((2 * Math.Pi()) / 50) * 0.5;  # 0.5 HZ
-      min_opacity = 0.3;
-      opacity = (Math.Cos(logo.opacity_angle) + 1) / 2;
-      opacity *= 1 - min_opacity;
-      opacity += min_opacity;
-      logo.sprite.SetOpacity (opacity);
-    }
-}
-
-Plymouth.SetRefreshFunction (shutdown_pulse_callback);
 
 # ------------------------------------ Quit ------------------------------------
 
