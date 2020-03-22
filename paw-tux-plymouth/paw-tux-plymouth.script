@@ -3,7 +3,7 @@
 # -------------------------[ micheal.bearly@gmail.com ]-------------------------
 # --------------------------------[ Thank you ]---------------------------------
 
-logo.image = Image("boot.png");
+logo.image = Image("logo.png");
 Window.SetBackgroundTopColor(0, 0, 0);
 Window.SetBackgroundBottomColor(0, 0, 0);
 
