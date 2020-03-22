@@ -4,5 +4,5 @@ Description=Paw Tux Plymouth theme
 ModuleName=script
 
 [script]
-ImageDir=/usr/share/plymouth/themes/paw-tux-plymouth
+ImageDir=/usr/share/plymouth/themes/paw-tux-plymouth/images
 ScriptFile=/usr/share/plymouth/themes/paw-tux-plymouth/paw-tux-plymouth.script
