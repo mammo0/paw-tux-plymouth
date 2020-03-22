@@ -149,6 +149,13 @@ if (Plymouth.GetMode () == "boot")
           progress_bar.image = progress_bar.original_image.Scale(progress_bar.original_image.GetWidth(progress_bar.original_image) * progress, progress_bar.original_image.GetHeight());
           progress_bar.sprite.SetImage (progress_bar.image);
         }
+
+      # hide progress bar/box when 100 percent is reached
+      if (progress == 1)
+        {
+          progress_box.sprite.SetOpacity (0);
+          progress_bar.sprite.SetOpacity (0);
+        }
     }
 
   Plymouth.SetBootProgressFunction(progress_callback);
