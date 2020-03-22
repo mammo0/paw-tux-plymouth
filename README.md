@@ -1,33 +1,14 @@
-# Apple Macintosh Plymouth Theme
+# Paw Tux Plymouth Theme
 
-Apple Mac Splash Loading plymouth theme
+Apple style Plymouth theme based on:
 
-Created by Navis Michael Bearly ]
+- [paw-tux plymouth](https://www.deviantart.com/shule1987/art/paw-tux-plymouth-273045193) by [shule1987](https://www.deviantart.com/shule1987)
+- [apple-mac-plymouth](https://www.opencode.net/mikebearly/apple-mac-plymouth) by [mikebearly](https://www.opencode.net/mikebearly)
 
-EMail: michael.bearly@gmail.com
 
-**How to install (from file manager)**
-* Download apple-mac-plymouth.tar.xz file
-* Extract here
-* Open folder apple-mac-plymouth
-* Run install.sh
-
-**How to install (from terminal)**
-* Download apple-mac-plymouth.tar.xz file
-* Extract here
-* Open folder apple-mac-plymouth
-* Right click (on an empty area)
-* Click open in terminal
-* Type command bellow
-* chmod 777 install.sh
-* sudo ./install.sh 
-* Done
-
-**Tested on**
-* Ubuntu 18.04 LTS
-* Xubuntu 18.04
-* Kubuntu 18.04
-* Linux Mint 19
-
-**Any questions? Please contact me on :**
-* EMail - michael.bearly@gmail.com
+### Install
+1. Simply copy the directory `paw-tux-plymouth` to
+    ```
+    /usr/share/plymouth/themes/
+    ```
+2. Based on your used Linux distribution it's different, how to tell Plymouth to use the newly added theme. Please have a look in the documentation of your distribution.
