@@ -7,7 +7,7 @@ Apple style Plymouth theme based on:
 
 
 ### Install
-1. Simply copy the directory `paw-tux-plymouth` to
+1. Simply copy the directory `paw-tux` to
     ```
     /usr/share/plymouth/themes/
     ```
