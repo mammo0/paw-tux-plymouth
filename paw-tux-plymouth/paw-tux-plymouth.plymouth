@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=paw-tux-plymouth
+Description=Paw Tux Plymouth theme
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/paw-tux-plymouth
+ScriptFile=/usr/share/plymouth/themes/paw-tux-plymouth/paw-tux-plymouth.script
